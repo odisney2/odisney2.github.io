@@ -1,0 +1,384 @@
+/* 
+    Orris Disney II
+    Spring 2018 Front End Web Development Class
+    Code Louisville Personal Project 
+    Disney Portfolio
+    Main CSS page
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+.contactColumn1 {
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+.contactColumn2 {
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.contactColumnAll,
+.resumeColumnAll {
+    display: inline-block;
+    /* border: 1px red solid; */
+}
+
+.contactColumnMain {
+    display: inline-block;
+    /* border: 1px red solid; */
+    font-size: 1.5em;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+
+}
+
+.row {
+    /* border: 1px blue solid; */
+    text-align: left;
+    padding-bottom: 0.5em;
+}
+
+
+.mainBodyWrapper,
+.mainHeaderInfo,
+.mainHeaderContent,
+.mainHeader,
+.mainContentTitle,
+.mainContent,
+.mainFooter{
+    background-color: rgb(203, 210, 216);
+     
+}
+
+/* this set the block to be hyperlinked instead of just the word themselves */
+li a{
+    display: block;
+}
+
+/* this removes the underline from the hyperlinks */
+a {
+    text-decoration: none;
+}
+
+div p {
+    padding: 10px;
+    margin: 0;
+}
+
+.mainBodyWrapper {
+    /* minimum height of viewport to help setup sticky footer on bottom*/
+    min-height: calc(100vh - 48px);   
+}
+
+.mainHeader,
+.mainFooter {
+    color: white;
+}
+
+.mainHeaderIcon p{
+    /* background-image: url("../img/letter_d_grey.jpg");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center; */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.mainContent,
+.mainContentTitle,
+.container_single {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.mainContentTitle {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainFooter {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container_all_title,
+.container_all_content {
+    background-color:rgb(175, 174, 175);
+}
+
+.container_all_title {
+    font-style: italic;
+    font-size: 2em;
+    text-align: center;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+.container_all_content ul{
+    padding: 0px 20px;
+    list-style: disc;
+    /* list-style-type: circle;
+    list-style-position: inside; */
+}
+
+.container_all_content ul li {
+    display: list-item;
+    text-align: left;
+    padding-bottom: 5px;
+
+}
+
+.listHeader {
+    list-style: none;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+.listHeader ul{
+    padding-top: 0.5em;
+
+}
+
+.listHeader ul li{
+    font-weight: normal;
+}
+
+.container_all {
+    margin: 10px;
+}
+
+.mainHeaderInfo {
+    text-align: center;
+}
+
+.mainHeaderNav li {
+    /* display: inline-block; */
+    /* margin-left: 10px; */
+     /* padding: 5px 15px; */
+    /* width: 150px; */   
+
+    background-color: #607993;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    
+}
+
+
+
+/* when someone hover, the hyperlink become focus over the main Header Navigation, this will change background color and the color of the font*/
+.mainHeaderNav li:hover {
+    background-color: blueviolet;
+    transition: background-color 1.0s;
+}
+
+li a {
+    color: white;
+}
+
+li a:focus {
+    background-color: rgb(75, 44, 146);
+}
+
+.mainHeaderIcon p {
+    font: bold;
+    font-size: 4em;
+    text-align: center;
+}
+
+h1, 
+h2, p {
+    margin: 0;
+    /* padding: 0; */
+    
+}
+
+/*  
+This section is for the tab setup for the Resume page.   i used the w3schools.com as the reference on how to setup the tabs
+*/
+
+/* Style the tab */
+.tabResume {
+    /* 
+    The overflow property specifies what should happen if content overflows an element's box. 
+    This property specifies whether to clip content or to add scrollbars when an element's content
+     is too big to fit in a specified area.
+    */
+
+    overflow: hidden; 
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabResume button {
+    background-color: inherit;
+    border-top-left-radius : 20px;
+    border-top-right-radius: 20px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tabResume button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tabResume button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabResumeContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+
+/* END of the tab in Resume setup */
+
+
+
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+/*******  Media Queries ********/
+
+@media (min-width: 600px) {
+  
+    /*  Makes the Navigation button 50% smaller between screen size 600px and 930px and center on the page */
+    .mainHeaderNav li {
+        width: 50%;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    .mainBodyWrapper,
+    .mainHeaderInfo,
+    .mainHeaderContent,
+    .mainHeader,
+    .mainContentTitle,
+    .mainContent,
+    .mainFooter, 
+    hr {
+        background-color:  rgb(177, 186, 196); 
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    .mainContent,
+    .mainContentTitle {
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .mainContent {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .container_one,
+    .container_three {
+        width: 45%;
+    }
+
+    .container_two {
+        order: 2;
+    }
+    .container_all {
+        margin: 5px;
+    }
+
+
+}
+
+@media (min-width: 930px) {
+
+    .mainBodyWrapper,
+    .mainHeaderInfo,
+    .mainHeaderContent,
+    .mainHeader,
+    .mainContentTitle,
+    .mainContent,
+    .mainFooter{
+        background-color: #9099A2;
+         
+    }
+    
+
+    .mainContent,
+    .mainContentTitle {
+        width: 90%;
+    }
+
+    .container_all {
+        width: 30%;
+        margin: 10px;
+    }
+
+    .container_two {
+        order: 0;
+    }
+
+    .mainHeaderIcon {
+        float: left;
+    }
+
+    .mainHeaderIcon p {
+        margin-top: 10px;
+    }
+
+    .mainHeaderNav {
+        float: right;
+        margin: 1em;
+    }
+
+   .mainHeaderNav li {
+        display: inline-block;
+        margin-left: 10px;
+        padding: 5px 15px;
+        width: 150px;   
+    }
+
+    
+}
